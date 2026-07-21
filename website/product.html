@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Product Details</title>
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/product.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="top-header">
+      <div class="logo">
+        <img src="assets/images/logo.png" />
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search products" />
+      </div>
+    </div>
+  </header>
+
+  <section class="product-page">
+    <div class="product-gallery">
+      <div class="main-image">
+        <img id="mainProductImage" src="" alt="" />
+      </div>
+
+      <div id="productGallery" class="thumbnail-gallery">
+
+      </div>
+    </div>
+
+    <div class="product-details">
+      <div class="wishlist-box">
+    
+        <button id="wishlistBtn" class="wishlist-btn" onclick="toggleWishlist()">
+    
+          🤍 Add to Wishlist
+    
+        </button>
+    
+      </div>
+      <h1 id="productName"></h1>
+
+      <div class="brand">Brand : Pyaru Didi Collection</div>
+
+      <div class="price-box">
+        <span id="salePrice" class="sale-price"> </span>
+
+        <span id="oldPrice" class="original-price"> </span>
+
+        <span class="discount"> 50% OFF </span>
+      </div>
+
+      <h3>Select Size</h3>
+
+      <div class="variant-group" id="sizeGroup">
+      </div>
+
+      <h3>Select Color</h3>
+
+      <div class="variant-group" id="colorGroup">
+      </div>
+
+      <h3>Quantity</h3>
+
+      <div class="qty-box">
+
+        <button onclick="decreaseQty()">
+
+          −
+
+        </button>
+
+        <input type="number" id="qty" value="1" min="1" readonly>
+
+        <button onclick="increaseQty()">
+
+          +
+
+        </button>
+
+      </div>
+
+      <p id="stockInfo">
+
+        In Stock
+
+      </p>
+
+      <button class="cart-btn" onclick="addCurrentProductToCart()">
+        Add To Cart
+      </button>
+
+      <button class="telegram-btn" onclick="orderNow()">
+        Order On Telegram
+      </button>
+
+      <div class="description">
+        <h3>Description</h3>
+
+        <p id="productDescription"></p>
+      </div>
+      <section class="related-products">
+
+        <h2>
+
+          Related Products
+
+        </h2>
+
+        <div class="product-grid" id="relatedProducts">
+
+        </div>
+    </div>
+  </section>
+
+  <!-- API Layer -->
+  <script src="assets/js/api-client.js"></script>
+  
+  <!-- Product Data Manager (depends on APIClient) -->
+  <script src="assets/js/product-manager.js"></script>
+  
+  <!-- Cart and Wishlist (depend on ProductManager) -->
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  
+  <!-- Telegram and Product UI (depend on ProductManager) -->
+  <script src="assets/js/telegram.js"></script>
+  <script src="assets/js/product.js"></script>
+
+</body>
+
+</html>

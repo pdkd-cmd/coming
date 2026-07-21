@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offers</title>
+
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<aside class="sidebar">
+
+<h2>PDKD Admin</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="categories.html">Categories</a></li>
+<li><a href="offers.html">Offers</a></li>
+<li><a href="#" onclick="logout()">Logout</a></li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<h1>Offers</h1>
+
+<form id="offerForm">
+
+<input id="title" placeholder="Title">
+
+<input id="subtitle" placeholder="Subtitle">
+
+<input id="discount" placeholder="Discount">
+
+<input id="button_text" placeholder="Button Text">
+
+<input id="button_link" placeholder="Button Link">
+
+<button type="submit">
+
+Save Offer
+
+</button>
+
+</form>
+
+<hr>
+
+<div id="offerList"></div>
+
+</main>
+
+</div>
+
+<script src="assets/js/api.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/offers.js"></script>
+<script src="assets/js/sidebar.js"></script>
+
+</body>
+</html>

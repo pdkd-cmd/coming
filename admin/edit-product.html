@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Product</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <h2>PDKD Admin</h2>
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="categories.html">
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inventory.html">
+                        Inventory
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+
+            <div class="page-header">
+
+                <h1>Edit Product</h1>
+
+                <a href="products.html" class="add-btn">
+
+                    Back
+
+                </a>
+
+            </div>
+
+            <form class="product-form" id="productForm">
+
+                <input type="text" id="name" placeholder="Product Name">
+
+                <input type="text" id="sku" placeholder="SKU">
+
+                <input type="text" id="brand" placeholder="Brand">
+
+                <input type="number" id="price" placeholder="Price">
+
+                <input type="number" id="sale_price" placeholder="Sale Price">
+
+                <input type="number" id="stock" placeholder="Stock">
+
+                <select id="category">
+                    <option value="">Select Category</option>
+                </select>
+
+                <textarea id="description" placeholder="Description">
+            </textarea>
+
+                <input type="text" id="image" placeholder="product1.jpg">
+
+                <hr style="margin:40px 0;">
+
+                <h2>Product Variants</h2>
+
+                <div id="variantList"></div>
+
+                <br>
+
+                <button type="button" onclick="addVariantRow()" class="add-btn">
+
+                    + Add Variant
+
+                </button>
+
+                <hr style="margin:40px 0;">
+
+                <h2>Product Gallery</h2>
+
+                <input type="file" id="galleryImages" multiple accept="image/*">
+
+                <br><br>
+
+                <button type="button" onclick="uploadGalleryImages()" class="add-btn">
+
+                    Upload Images
+
+                </button>
+
+                <br><br>
+
+                <div id="galleryList" style="
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+gap:20px;
+">
+
+                </div>
+
+                <br>
+
+                <button type="submit">
+
+                    Update Product
+
+                </button>
+
+            </form>
+        </main>
+
+    </div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/edit-product.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+
+</body>
+
+</html>

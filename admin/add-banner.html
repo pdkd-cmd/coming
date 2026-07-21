@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Banner</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <h2>PDKD Admin</h2>
+
+            <ul>
+
+                <li><a href="dashboard.html">Dashboard</a></li>
+
+                <li><a href="products.html">Products</a></li>
+
+                <li><a href="orders.html">Orders</a></li>
+
+                <li><a href="inventory.html">Inventory</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="banners.html">Banners</a></li>
+
+                <li><a href="settings.html">Settings</a></li>
+
+                <li><a href="#" onclick="logout()">Logout</a></li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+
+            <h1>Add Banner</h1>
+
+            <form id="bannerForm" class="product-form">
+
+                <input id="title" placeholder="Banner Title" required>
+
+                <input id="subtitle" placeholder="Banner Subtitle">
+
+                <input id="buttonText" placeholder="Button Text">
+
+                <input id="buttonLink" placeholder="Button Link">
+
+                <input type="file" id="bannerImage" accept="image/*">
+
+                <select id="status">
+
+                    <option value="1">
+
+                        Active
+
+                    </option>
+
+                    <option value="0">
+
+                        Inactive
+
+                    </option>
+
+                </select>
+
+                <button type="submit">
+
+                    Save Banner
+
+                </button>
+
+            </form>
+
+        </main>
+
+    </div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/add-banner.js"></script>
+
+</body>
+
+</html>

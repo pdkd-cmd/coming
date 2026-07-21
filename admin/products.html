@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Products</title>
+
+  <link rel="stylesheet" href="assets/css/admin.css" />
+</head>
+
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>PDKD Admin</h2>
+
+      <ul>
+
+        <li><a href="dashboard.html">Dashboard</a></li>
+
+        <li><a href="products.html">Products</a></li>
+
+        <li><a href="orders.html">Orders</a></li>
+
+        <li><a href="inventory.html">Inventory</a></li>
+
+        <li><a href="categories.html">Categories</a></li>
+
+        <li><a href="offers.html">Offers</a></li>
+
+        <li><a href="banners.html">Banners</a></li>
+
+        <li><a href="settings.html">Settings</a></li>
+
+        <li><a href="#" onclick="logout()">Logout</a></li>
+
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Products</h1>
+
+        <a href="add-product.html" class="add-btn"> + Add Product </a>
+      </div>
+
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>SKU</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="productTableBody">
+        </tbody>
+      </table>
+    </main>
+  </div>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/sidebar.js"></script>
+</body>
+
+</html>

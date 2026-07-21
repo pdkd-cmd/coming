@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pyaru Didi Ki Dukan</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="top-strip">
+            🚚 Free Delivery on Orders Above ₹999 &nbsp; | &nbsp; 🔥 New Collection Available
+        </div>
+
+        <div class="top-header">
+
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Pyaru Didi Ki Dukan">
+            </a>
+
+            <div class="search-box">
+
+                <input type="text" id="searchInput" placeholder="Search for Kurtis, Sarees, Dresses...">
+
+                <button class="search-btn">
+                    🔍
+                </button>
+
+            </div>
+
+            <div class="header-actions">
+
+                <a href="wishlist.html" class="icon-btn">
+                    ❤️
+                    <span>Wishlist</span>
+                </a>
+
+                <a href="cart.html" class="icon-btn">
+
+                    🛒
+
+                    <span>Cart</span>
+
+                    <span id="cartBadge">0</span>
+
+                </a>
+
+                <!-- <a href="#" class="icon-btn">
+
+                    👤
+
+                    <span>Account</span>
+
+                </a> -->
+
+                <button id="mobileMenuBtn" class="mobile-menu-btn">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <nav class="navbar" id="navbar">
+
+            <a href="index.html">Home</a>
+
+            <a href="category.html">Categories</a>
+
+            <a href="offers.html">Offers</a>
+
+            <a href="#trendingProducts">Trending</a>
+
+            <a href="#newProducts">New Arrival</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <section class="hero" id="heroBanner">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                ✨ New Fashion Collection 2026
+            </span>
+
+            <h1 id="bannerTitle">
+                Elevate Your Style With Premium Fashion
+            </h1>
+
+            <p id="bannerSubtitle">
+                Discover elegant kurtis, sarees and ethnic wear curated for every occasion.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a id="bannerButtonLink" href="#productGrid">
+                    <button id="bannerButton" class="primary-btn">
+                        Shop Now →
+                    </button>
+                </a>
+
+                <a href="#newProducts">
+                    <button class="secondary-btn">
+                        New Arrivals
+                    </button>
+                </a>
+
+            </div>
+
+            <div class="hero-features">
+
+                <div class="feature-item">
+                    🚚 Free Delivery
+                </div>
+
+                <div class="feature-item">
+                    💳 Secure Order
+                </div>
+
+                <div class="feature-item">
+                    ⭐ Premium Quality
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="categories">
+
+        <div class="section-title">
+            <h2>Shop By Category</h2>
+        </div>
+
+        <div class="category-grid" id="categoryGrid">
+
+        </div>
+
+    </section>
+
+    <section class="featured-products">
+
+        <div class="section-title">
+            <h2>Featured Products</h2>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+
+        </div>
+
+    </section>
+
+    <section class="featured-products">
+        <h2>Trending Products</h2>
+        <div class="product-grid" id="trendingProducts"></div>
+    </section>
+
+    <section class="featured-products">
+        <h2>New Arrivals</h2>
+        <div class="product-grid" id="newProducts"></div>
+    </section>
+
+
+    <section class="offer-banner" id="offerBanner">
+
+        <div class="offer-content">
+
+            <span class="offer-tag">
+                LIMITED OFFER
+            </span>
+
+            <h2 id="offerTitle">
+                Flat 50% OFF
+            </h2>
+
+            <p id="offerSubtitle">
+                Premium Collection Available Now
+            </p>
+
+            <a href="#productGrid">
+
+                <button id="offerButton">
+
+                    Shop Now
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+
+                <h3 id="footerStoreName">
+
+                    Pyaru Didi Ki Dukan
+
+                </h3>
+
+                <p id="footerText">
+
+                    Premium Shopping Experience
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <p><a href="index.html">Home</a></p>
+
+                <p><a href="#productGrid">Products</a></p>
+
+                <p><a href="#offerBanner">Offers</a></p>
+
+            </div>
+
+            <div>
+
+                <h4>Contact</h4>
+
+                <p id="footerPhone">
+
+                    Phone
+
+                </p>
+
+                <p id="footerEmail">
+
+                    Email
+
+                </p>
+
+                <p id="footerTelegram">
+
+                    Telegram
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div id="toast" class="toast">
+        <span id="toastMessage">
+            Success
+        </span>
+`   </div>
+    <script src="assets/js/api-client.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/categories.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+
+</html>
