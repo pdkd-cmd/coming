@@ -44,14 +44,6 @@ app.use("/api/banners", bannerRoutes);
 app.use("/api/settings", settingsRoutes);
 app.use("/api/product-images", verifyToken, productImageRoutes);
 
-const path = require("path");
-
-// Serve website files
-app.use(express.static(path.join(__dirname, "../website")));
-
-// Serve admin panel
-app.use("/admin", express.static(path.join(__dirname, "../admin")));
-
 // Homepage
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../website/index.html"));
