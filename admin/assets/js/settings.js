@@ -1,4 +1,7 @@
-const API = "http://localhost:5000/api/settings";
+const API =
+  window.location.origin.includes("localhost")
+    ? "http://localhost:5000/api/settings"
+    : "/api/settings";
 
 // =========================
 // Load Settings

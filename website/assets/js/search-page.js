@@ -7,7 +7,8 @@ document.getElementById("searchInput").value = keyword;
 document.getElementById("searchTitle").innerText = `Results for "${keyword}"`;
 
 async function loadSearch() {
-  const response = await fetch("http://localhost:5000/api/products");
+  const result = await APIClient.getAllProducts();
+  const products = result.data || [];
 
   const result = await response.json();
 

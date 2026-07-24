@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+const path = require("path");
+
 const express = require("express");
 const cors = require("cors");
 
@@ -26,6 +28,13 @@ app.use(
 express.static("uploads")
 );
 
+app.use(express.static(path.join(__dirname, "../website")));
+
+app.use(
+  "/admin",
+  express.static(path.join(__dirname, "../admin"))
+);
+
 app.use("/api/dashboard", verifyToken, dashboardRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/categories", categoryRoutes);
@@ -46,6 +55,11 @@ app.use("/admin", express.static(path.join(__dirname, "../admin")));
 // Homepage
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../website/index.html"));
+});
+
+// Admin panel
+app.get("/admin", (req, res) => {
+  res.sendFile(path.join(__dirname, "../admin/login.html"));
 });
 
 const PORT = process.env.PORT || 5000;

@@ -1,10 +1,7 @@
 async function loadWishlist() {
   const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-  const response = await fetch("http://localhost:5000/api/products");
-
-  const result = await response.json();
-
+  const result = await APIClient.getAllProducts();
   const products = result.data || [];
 
   const grid = document.getElementById("wishlistGrid");

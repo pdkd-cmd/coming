@@ -1,4 +1,7 @@
-const API_BASE = "http://localhost:5000/api";
+const API_BASE =
+  window.location.origin.includes("localhost")
+    ? "http://localhost:5000/api"
+    : "/api";
 
 async function apiGet(endpoint) {
 

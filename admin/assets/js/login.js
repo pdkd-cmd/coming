@@ -1,51 +1,44 @@
 if (localStorage.getItem("adminToken")) {
-    window.location.href = "dashboard.html";
+  window.location.href = "dashboard.html";
 }
 
 async function login() {
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const error = document.getElementById("loginError");
 
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const error = document.getElementById("loginError");
+  error.innerText = "";
 
-    error.innerText = "";
+  try {
+    const API_BASE = window.location.origin.includes("localhost")
+      ? "http://localhost:5000/api"
+      : "/api";
 
-    try {
+    const response = await fetch(`${API_BASE}/auth/login`, {
+      method: "POST",
 
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+      headers: {
+        "Content-Type": "application/json",
+      },
 
-            method: "POST",
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    });
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+    const data = await response.json();
 
-            body: JSON.stringify({
-                username,
-                password
-            })
+    if (data.success) {
+      localStorage.setItem("adminToken", data.token);
 
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-
-            localStorage.setItem("adminToken", data.token);
-
-            window.location.href = "dashboard.html";
-
-        } else {
-
-            error.innerText = data.message;
-            error.style.color = "red";
-
-        }
-
-    } catch (err) {
-
-        error.innerText = "Unable to connect to server.";
-        error.style.color = "red";
-
+      window.location.href = "dashboard.html";
+    } else {
+      error.innerText = data.message;
+      error.style.color = "red";
     }
+  } catch (err) {
+    error.innerText = "Unable to connect to server.";
+    error.style.color = "red";
+  }
 }
